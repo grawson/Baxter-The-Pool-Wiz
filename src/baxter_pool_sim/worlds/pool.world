@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+
+    <include><uri>model://ground_plane</uri></include>
+
+    <include><uri>model://sun</uri></include>
+
+
+    <model name="pool_table">
+      <pose>0 0 0  0 0 0</pose>
+      <static>true</static>
+      <link name="body">
+        <visual name="visual">
+          <pose> 2.19646 0.724227 0 0 -0 0 </pose>
+          <geometry>
+            <mesh><uri>model://pool_table/pool_table.dae</uri></mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <population name="pool_balls_population">
+       <model name="pool_ball">
+         <include>
+           <!-- <static>true</static> -->
+           <uri>model://pool_ball</uri>
+         </include>
+       </model>
+       <pose>4.5 -0.722673 0.770478   0 0 0</pose>
+       <box>
+         <size>0.5 0.5 0.01</size>
+       </box>
+       <model_count>2</model_count>
+       <distribution>
+         <type>linear-x</type>
+       </distribution>
+     </population>
+
+  </world>
+</sdf>
