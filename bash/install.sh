@@ -1,6 +1,4 @@
 # setup workspace
-sudo rm -r ~/Baxter-The-Pool-Wiz
-mkdir -p ~/Baxter-The-Pool-Whiz/src
 source /opt/ros/kinetic/setup.bash
 cd ~/Baxter-The-Pool-Whiz
 catkin build
