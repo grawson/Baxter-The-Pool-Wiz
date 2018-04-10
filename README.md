@@ -51,11 +51,14 @@ rosrun baxter_examples joint_velocity_wobbler.py
 
 The Baxter should be waving its arms :)
 
-## Run Pool Simulation
+
+## Pool Simulation
+
+Make sure to put the contents of the `meshes` directory into your gazebo models directory located at `~/.gazebo/models`
+
+Then run:
 
 ``` bash
 source ~/Baxter-The-Pool-Wiz/deve/setup.bash
 ./baxter.sh sim
 roslaunch baxter_pool_sim pool.launch
-```
-
