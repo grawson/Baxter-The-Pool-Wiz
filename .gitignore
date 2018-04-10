@@ -8,4 +8,5 @@ src/baxter_common
 src/baxter_interface
 src/baxter_simulator
 src/baxter_tools
+src/baxter_examples
 .rosinstall*
