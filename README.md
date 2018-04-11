@@ -16,49 +16,55 @@ cd ~/Baxter-The-Pool-Wiz
 ./install.sh
 ```
 
+Now edit `Baxter-The-Pool-Wiz/baxter.sh` and make sure the 30th ish line reads:
+
+``` bash
+ros_version="kinetic"
+```
+
 ## Test Installation
 
-Make sure to always source the workspace when opening a new terminal window.
+Whenever running any commands, make sure you are in a terminal window and have run the commands:
 
 ``` bash
 source ~/Baxter-The-Pool-Wiz/devel/setup.bash
+cd ~/Baxter-The-Pool-Wiz
+./baxter.sh sim
 ```
 
-Source a terminal window and run:
+Setup a terminal window and run:
 
 ``` bash
 # Launch Baxter in an empty world
-cd ~/Baxter-The-Pool-Wiz
-./baxter.sh sim
 roslaunch baxter_gazebo baxter_world.launch
 ```
 
-Wait for Gazebo to spin up. You should see the robot in the world. In another sourced terminal window, run:
+Wait for Gazebo to spin up. You should see the robot in the world. In another setup terminal window, run:
 
 ``` bash
 # Enable the robot
-cd ~/Baxter-The-Pool-Wiz
-./baxter.sh sim
 rosrun baxter_tools enable_robot.py -e      
+```
 
+Then:
+
+``` bash
 # run test
 rosrun baxter_examples joint_velocity_wobbler.py  
 ```
 
 The Baxter should be waving its arms :)  
-Now to test MoveIt!, stop the wobbler script and run in the same window:
+Now to test MoveIt!, stop the wobbler script and run:
 
 ``` bash
 # Start trajectory controller
 rosrun baxter_interface joint_trajectory_action_server.py
 ```
 
-In another sourced terminal:
+In another setup window:
 
 ``` bash
 # Start Rviz MoveIt! plugin
-cd ~/Baxter-The-Pool-Wiz
-./baxter.sh sim
 roslaunch baxter_moveit_config baxter_grippers.launch
 
 ```
