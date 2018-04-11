@@ -37,6 +37,8 @@ Wait for Gazebo to spin up. You should see the robot in the world. In another so
 
 ``` bash
 # Enable the robot
+cd ~/Baxter-The-Pool-Wiz
+./baxter.sh sim
 rosrun baxter_tools enable_robot.py -e      
 ```
 
@@ -49,16 +51,23 @@ cd ~/Baxter-The-Pool-Wiz
 rosrun baxter_examples joint_velocity_wobbler.py  
 ```
 
-The Baxter should be waving its arms :)
+The Baxter should be waving its arms :)  
+Now to test MoveIt!, stop the wobbler script and run:
 
+``` bash
+roslaunch baxter_moveit_config baxter_grippers.launch
+```
+
+Move the gripper around using the tool overlaying the gripper. Once a destination pose is selected (marked in orange), go to the `planning` tab and click `plan`. You should see the animated trajectory.
 
 ## Pool Simulation
 
 Make sure to put the contents of the `meshes` directory into your gazebo models directory located at `~/.gazebo/models`
 
-Then run:
+Then run in a sourced terminal:
 
 ``` bash
-source ~/Baxter-The-Pool-Wiz/deve/setup.bash
+cd ~/Baxter-The-Pool-Wiz
 ./baxter.sh sim
 roslaunch baxter_pool_sim pool.launch
+```

@@ -9,4 +9,5 @@ src/baxter_interface
 src/baxter_simulator
 src/baxter_tools
 src/baxter_examples
+src/moveit_robots
 .rosinstall*
