@@ -82,3 +82,10 @@ cd ~/Baxter-The-Pool-Wiz
 ./baxter.sh sim
 roslaunch baxter_pool_sim pool.launch
 ```
+
+To launch the pool shot planner, run:
+
+
+``` bash
+roslaunch pool_planner pool_planner.launch
+```
