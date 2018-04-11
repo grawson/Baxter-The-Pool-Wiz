@@ -40,14 +40,8 @@ Wait for Gazebo to spin up. You should see the robot in the world. In another so
 cd ~/Baxter-The-Pool-Wiz
 ./baxter.sh sim
 rosrun baxter_tools enable_robot.py -e      
-```
 
-And in another:
-
-``` bash
 # run test
-cd ~/Baxter-The-Pool-Wiz
-./baxter.sh sim
 rosrun baxter_examples joint_velocity_wobbler.py  
 ```
 
@@ -55,10 +49,21 @@ The Baxter should be waving its arms :)
 Now to test MoveIt!, stop the wobbler script and run:
 
 ``` bash
-roslaunch baxter_moveit_config baxter_grippers.launch
+# Start trajectory controller
+rosrun baxter_interface joint_trajectory_action_server.py
 ```
 
-Move the gripper around using the tool overlaying the gripper. Once a destination pose is selected (marked in orange), go to the `planning` tab and click `plan`. You should see the animated trajectory.
+In another sourced terminal:
+
+``` bash
+# Start Rviz MoveIt! plugin
+cd ~/Baxter-The-Pool-Wiz
+./baxter.sh sim
+roslaunch baxter_moveit_config baxter_grippers.launch
+
+```
+
+Wait until you see the message `You can start planning now!`. Move the gripper around using the tool overlaying the gripper. Once a destination pose is selected (marked in orange), go to the `planning` tab and click `plan`. You should see the animated trajectory.
 
 ## Pool Simulation
 
