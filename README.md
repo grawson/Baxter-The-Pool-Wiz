@@ -46,7 +46,7 @@ rosrun baxter_examples joint_velocity_wobbler.py
 ```
 
 The Baxter should be waving its arms :)  
-Now to test MoveIt!, stop the wobbler script and run:
+Now to test MoveIt!, stop the wobbler script and run in the same window:
 
 ``` bash
 # Start trajectory controller
