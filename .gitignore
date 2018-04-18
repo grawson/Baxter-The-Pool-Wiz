@@ -3,5 +3,5 @@ build/
 devel/
 logs/
 baxter.sh
-src/git/
+src/dep/
 .rosinstall*
