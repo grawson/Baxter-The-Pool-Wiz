@@ -1,4 +1,4 @@
-location: src
+location: src/
 sources:
 
 -   name: baxter_simulator
