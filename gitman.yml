@@ -14,7 +14,7 @@ sources:
     repo: https://github.com/RethinkRobotics/baxter_tools.git
     rev: development
 -   name: baxter_common
-    repo: https://github.com/RethinkRobotics/baxter_common.git
+    repo: git@github.com:grawson/baxter_common.git
     rev: kinetic-devel
 -   name: baxter_examples
     repo: https://github.com/RethinkRobotics/baxter_examples.git
