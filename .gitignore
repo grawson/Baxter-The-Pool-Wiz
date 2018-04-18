@@ -4,6 +4,7 @@ devel/
 logs/
 baxter.sh
 src/baxter
+src/baxter_common
 src/baxter_interface
 src/baxter_simulator
 src/baxter_tools
