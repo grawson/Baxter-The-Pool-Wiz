@@ -34,7 +34,7 @@
             <far>3</far>
           </clip>
         </camera>
-	<plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+    	<plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
           <baseline>0.2</baseline>
           <alwaysOn>true</alwaysOn>
           <!-- Keep this zero, update_rate in the parent <sensor> tag
@@ -58,7 +58,7 @@
           <Cy>0</Cy>
           <focalLength>0</focalLength>
           <hackBaseline>0</hackBaseline>
-	  <static>true</static>
+	      <static>true</static>
         </plugin>
       </sensor>
     </link>
