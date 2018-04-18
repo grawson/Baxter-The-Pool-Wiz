@@ -14,7 +14,7 @@ sudo apt-get install gazebo7 ros-kinetic-qt-build ros-kinetic-gazebo-ros-control
 sudo apt-get install ros-kinetic-moveit
 
 # install git repos
-gitman install
+gitman install --force
 
 # Configure Baxter Communication
 cd ~/Baxter-The-Pool-Wiz
