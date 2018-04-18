@@ -1,3 +1,6 @@
+# install gitman
+pip install gitman
+
 # setup workspace
 source /opt/ros/kinetic/setup.bash
 cd ~/Baxter-The-Pool-Wiz

@@ -5,3 +5,5 @@ logs/
 baxter.sh
 src/dep/
 .rosinstall*
+*.DS_Store
+*._*
