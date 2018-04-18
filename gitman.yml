@@ -1,36 +1,24 @@
 location: src
 sources:
 
+-   name: baxter_simulator
+    repo: https://github.com/RethinkRobotics/baxter_simulator.git
+    rev: kinetic-devel
 -   name: baxter
     repo: https://github.com/RethinkRobotics/baxter.git
-    rev: master
+    rev: development
 -   name: baxter_interface
     repo: https://github.com/RethinkRobotics/baxter_interface.git
-    rev: master
+    rev: development
 -   name: baxter_tools
     repo: https://github.com/RethinkRobotics/baxter_tools.git
-    rev: master
+    rev: development
 -   name: baxter_common
     repo: https://github.com/RethinkRobotics/baxter_common.git
-    rev: master
+    rev: kinetic-devel
 -   name: baxter_examples
     repo: https://github.com/RethinkRobotics/baxter_examples.git
-    rev: master
--   name: baxter_simulator
-    repo: git@github.com:RethinkRobotics/baxter_simulator.git
-    rev: release-0.7.0
--   name: gazebo_ros_pkgs
-    repo: git@github.com:RethinkRobotics/gazebo_ros_pkgs.git
-    rev: hydro-devel
--   name: ros_controllers
-    repo: git@github.com:RethinkRobotics/ros_controllers.git
-    rev: hydro-devel
--   name: ros_control
-    repo: git@github.com:RethinkRobotics/ros_control.git
-    rev: hydro-devel
--   name: control_toolbox
-    repo: git@github.com:RethinkRobotics/control_toolbox.git
-    rev: hydro-devel
--   name: realtime_tools
-    repo: git@github.com:RethinkRobotics/realtime_tools.git
-    rev: hydro-devel
+    rev: development
+-   name: moveit_robots
+    repo: https://github.com/ros-planning/moveit_robots.git
+    rev: kinetic-devel
