@@ -71,6 +71,14 @@ roslaunch baxter_moveit_config baxter_grippers.launch
 
 Wait until you see the message `You can start planning now!`. Move the gripper around using the tool overlaying the gripper. Once a destination pose is selected (marked in orange), go to the `planning` tab and click `plan`. You should see the animated trajectory.
 
+## Update Repos
+
+Keep dependencies in `src/dep` up to date with command:
+
+```bash
+gitman update
+```
+
 ## Pool Simulation
 
 Make sure to put the contents of the `meshes` directory into your gazebo models directory located at `~/.gazebo/models`
