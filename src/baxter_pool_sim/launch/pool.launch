@@ -62,4 +62,7 @@
       <arg name="gui" value="$(arg gui)" />
   </include>
 
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz"/>
+
 </launch>
