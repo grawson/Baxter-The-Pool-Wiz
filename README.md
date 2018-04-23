@@ -79,34 +79,10 @@ Keep dependencies in `src/dep` up to date with command:
 gitman update
 ```
 
-## Pool Simulation
-
-Make sure to put the contents of the `meshes` directory into your gazebo models directory located at `~/.gazebo/models`
-
-Then run in a sourced terminal:
-
-``` bash
-cd ~/Baxter-The-Pool-Wiz
-./baxter.sh sim
-roslaunch baxter_pool_sim pool.launch
-```
-
-To launch the pool shot planner, run:
-
-
-``` bash
-roslaunch pool_planner pool_planner.launch
-```
-
-Then, to "listen" for pointclouds:
-
-``` bash
-rosrun pool_planner listener.cpp
-```
 
 ## PCL
 
-We downloaded PCL plus a few things in order to get everything to work. 
+We downloaded PCL plus a few things in order to get everything to work. This needs to happen before simulation. 
 
 Install oracle-java8-jdk:
 
@@ -156,4 +132,30 @@ We needed this line too:
 
 ``` bash
 sudo apt install libeigen3-dev
+```
+
+
+## Pool Simulation
+
+Make sure to put the contents of the `meshes` directory into your gazebo models directory located at `~/.gazebo/models`
+
+Then run in a sourced terminal:
+
+``` bash
+cd ~/Baxter-The-Pool-Wiz
+./baxter.sh sim
+roslaunch baxter_pool_sim pool.launch
+```
+
+To launch the pool shot planner, run:
+
+
+``` bash
+roslaunch pool_planner pool_planner.launch
+```
+
+Then, to "listen" for pointclouds:
+
+``` bash
+rosrun pool_planner listener.cpp
 ```
