@@ -83,6 +83,7 @@ gitman update
 ## PCL
 
 We downloaded PCL plus a few things in order to get everything to work. This needs to happen before simulation. 
+(source: https://askubuntu.com/questions/916260/how-to-install-point-cloud-library-v1-8-pcl-1-8-0-on-ubuntu-16-04-2-lts-for)
 
 Install oracle-java8-jdk:
 
