@@ -129,10 +129,11 @@ rm libeigen3-dev_3.2.5-4_all.deb VTK-7.1.0.tar.gz pcl-1.8.0.tar.gz
 sudo rm -r VTK-7.1.0 pcl-pcl-1.8.0
 ```
 
-We needed this line too:
+Install the following libraries:
 
 ``` bash
 sudo apt install libeigen3-dev
+sudo apt install libpcl-conversions-dev
 ```
 
 
