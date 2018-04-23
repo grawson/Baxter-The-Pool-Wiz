@@ -98,8 +98,13 @@ To launch the pool shot planner, run:
 roslaunch pool_planner pool_planner.launch
 ```
 
+Then, to "listen" for pointclouds:
 
-### PCL
+``` bash
+rosrun pool_planner listener.cpp
+```
+
+## PCL
 
 We downloaded PCL plus a few things in order to get everything to work. 
 
