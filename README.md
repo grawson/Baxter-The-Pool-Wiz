@@ -97,3 +97,58 @@ To launch the pool shot planner, run:
 ``` bash
 roslaunch pool_planner pool_planner.launch
 ```
+
+
+### PCL
+
+We downloaded PCL plus a few things in order to get everything to work. 
+
+Install oracle-java8-jdk:
+
+``` bash
+sudo add-apt-repository -y ppa:webupd8team/java && sudo apt update && sudo apt -y install oracle-java8-installer
+```
+
+Install universal pre-requisites:
+
+``` bash
+sudo apt -y install g++ cmake cmake-gui doxygen mpi-default-dev openmpi-bin openmpi-common libusb-1.0-0-dev libqhull* libusb-dev libgtest-dev
+sudo apt -y install git-core freeglut3-dev pkg-config build-essential libxmu-dev libxi-dev libphonon-dev libphonon-dev phonon-backend-gstreamer
+sudo apt -y install phonon-backend-vlc graphviz mono-complete qt-sdk libflann-dev     
+```
+
+For PCL v1.8, Ubuntu 16.04.2 input the following:
+
+``` bash
+sudo apt -y install libflann1.8 libboost1.58-all-dev
+
+cd ~/Downloads
+wget http://launchpadlibrarian.net/209530212/libeigen3-dev_3.2.5-4_all.deb
+sudo dpkg -i libeigen3-dev_3.2.5-4_all.deb
+sudo apt-mark hold libeigen3-dev
+
+wget http://www.vtk.org/files/release/7.1/VTK-7.1.0.tar.gz
+tar -xf VTK-7.1.0.tar.gz
+cd VTK-7.1.0 && mkdir build && cd build
+cmake ..
+make                                                                   
+sudo make install
+
+cd ~/Downloads
+wget https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.0.tar.gz
+tar -xf pcl-1.8.0.tar.gz
+cd pcl-pcl-1.8.0 && mkdir build && cd build
+cmake ..
+make
+sudo make install
+
+cd ~/Downloads
+rm libeigen3-dev_3.2.5-4_all.deb VTK-7.1.0.tar.gz pcl-1.8.0.tar.gz
+sudo rm -r VTK-7.1.0 pcl-pcl-1.8.0
+```
+
+We needed this line too:
+
+``` bash
+sudo apt install libeigen3-dev
+```
