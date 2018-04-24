@@ -134,6 +134,7 @@ Install the following libraries:
 ``` bash
 sudo apt install libeigen3-dev
 sudo apt install libpcl-conversions-dev
+sudo apt install ros-*-object-recognition-core
 ```
 
 
