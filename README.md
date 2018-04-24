@@ -76,6 +76,8 @@ Wait until you see the message `You can start planning now!`. Move the gripper a
 Keep dependencies in `src/dep` up to date with command:
 
 ```bash
+sudo apt install python3-pip
+pip3 install gitman
 gitman update
 ```
 
