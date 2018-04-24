@@ -24,4 +24,4 @@ sources:
     rev: kinetic-devel
 -   name: cluster_segmentation
     repo: git@github.com:CRLab/cluster_segmentation.git
-    rev: development
+    rev: master
