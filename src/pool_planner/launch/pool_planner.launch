@@ -1,3 +1,7 @@
 <launch>
     <node name="image_converter" pkg="pool_planner" type="image_converter.py" />
+    <node name="centroid" pkg="pool_planner" type="centroid.py" output="screen" />
+    <node name="robot2kinect" pkg="tf" type="static_transform_publisher" args="1 0 0 0 0 0 /head /camera_link 1" output="screen"/>
+    <!-- <node name="listener" pkg="pool_planner" type="listener" /> -->
+    <!-- <node name= "segmentation" pkg= "obj_recognition" type= "obj_recognition_segmentation" respawn= "false"/> -->
 </launch>
