@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- <include file="$(find baxter_moveit_config)/launch/demo_baxter.launch"/> -->
+
+  <node name="pose_planner" pkg="pool_planner" type="pose_planner.py" respawn="false" output="screen"></node>
+
+</launch>

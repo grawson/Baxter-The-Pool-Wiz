@@ -1,5 +1,5 @@
 # install gitman
-pip install gitman
+pip3 install gitman
 
 # setup workspace
 source /opt/ros/kinetic/setup.bash
@@ -14,7 +14,7 @@ sudo apt-get install git-core python-argparse python-wstool python-vcstools pyth
 sudo apt-get install gazebo7 ros-kinetic-qt-build ros-kinetic-gazebo-ros-control ros-kinetic-gazebo-ros-pkgs ros-kinetic-ros-control ros-kinetic-control-toolbox ros-kinetic-realtime-tools ros-kinetic-ros-controllers ros-kinetic-xacro python-wstool ros-kinetic-tf-conversions ros-kinetic-kdl-parser
 
 # Install MoveIt
-sudo apt-get install ros-kinetic-moveit
+sudo apt install ros-kinetic-moveit*
 
 # install git repos
 gitman install --force
@@ -28,4 +28,5 @@ chmod u+x baxter.sh
 source /opt/ros/kinetic/setup.bash
 cd ~/Baxter-The-Pool-Wiz
 catkin build
-cp src/baxter/baxter.sh .
+rm baxter.sh*
+cp src/dep/baxter/baxter.sh .

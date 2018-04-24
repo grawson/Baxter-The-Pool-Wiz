@@ -9,7 +9,7 @@ git clone <OUR-REPO>
 
 ## Install
 
-We've provided an install file that will set up the Baxter simulator within a ROS Kinetic environment.
+We've provided an install file that will set up the Baxter simulator within a ROS Kinetic environment. Make sure you've got pip3, catkin, and a GitHub account.
 
 ``` bash
 cd ~/Baxter-The-Pool-Wiz
@@ -82,7 +82,7 @@ gitman update
 
 ## PCL
 
-We downloaded PCL plus a few things in order to get everything to work. This needs to happen before simulation. 
+We downloaded PCL plus a few things in order to get everything to work. This needs to happen before simulation.
 (source: https://askubuntu.com/questions/916260/how-to-install-point-cloud-library-v1-8-pcl-1-8-0-on-ubuntu-16-04-2-lts-for)
 
 Install oracle-java8-jdk:
