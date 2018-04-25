@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+    <!--pool sim-->
+    <group ns="step_1">
+        <include file="$(find baxter_pool_sim)/launch/pool.launch" />
+    </group>
+
+
+    <!--enable robot-->
+    <group ns="step_2">
+        <node name="enable_robot" pkg="baxter_tools" type="enable_robot.py" args="-e" respawn="false" output="screen" />
+    </group>
+
+    <!--trajectory controller-->
+    <group ns="step_3">
+        <node name="robot_trajectory_controller" pkg="baxter_interface" type="joint_trajectory_controller_action_server.py" respawn="false" output="screen" />
+    </group>
+
+    <!--rviz moveit plugin-->
+    <group ns="step_4">
+        <include file="$(find baxter_moveit_config)/launch/baxter_grippers.launch" />
+    </group>
+
+    <group ns="step_5">
+        <node name="pose_planner" pkg="pose_planner" type="pose_planner.py" respawn="false" output="screen" />
+    </group>
+
+</launch>

@@ -1,3 +1,4 @@
+*.idea
 .catkin_tools
 build/
 devel/
@@ -7,3 +8,4 @@ src/dep/
 .rosinstall*
 *.DS_Store
 *._*
+*.pyc

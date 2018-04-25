@@ -100,20 +100,31 @@ sudo apt install ros-*-object-recognition-core
 
 Make sure to put the contents of the `meshes` directory into your gazebo models directory located at `~/.gazebo/models`
 
-Then run in a sourced terminal:
+Whenever running any commands, make sure you are in a terminal window and have run the commands:
 
 ``` bash
+source ~/Baxter-The-Pool-Wiz/devel/setup.bash
 cd ~/Baxter-The-Pool-Wiz
 ./baxter.sh sim
-roslaunch baxter_pool_sim pool.launch
 ```
-
-To launch the pool shot planner, run:
-
 
 ``` bash
-roslaunch pool_planner pool_planner.launch
+# launch sim
+roslaunch baxter_pool_sim pool.launch   
+
+# Enable the robot
+rosrun baxter_tools enable_robot.py -e 
+
+# Start trajectory controller
+rosrun baxter_interface joint_trajectory_action_server.py   
+
+# Start Rviz MoveIt! plugin
+roslaunch baxter_moveit_config baxter_grippers.launch
+
+# moveit pose planner
+roslaunch pool_planner pose_planner.launch
 ```
+
 
 Then, to "listen" for pointclouds:
 
