@@ -162,3 +162,12 @@ Then, to "listen" for pointclouds:
 ``` bash
 rosrun pool_planner listener.cpp
 ```
+
+## SEGMENTATION
+
+```bash
+roslaunch obj_recognition pool.launch
+rosrun obj_recognition obj_recogniti_segmentation 
+rosrun rviz rviz
+
+```
