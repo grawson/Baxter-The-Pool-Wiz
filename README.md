@@ -168,6 +168,15 @@ rosrun pool_planner listener.cpp
 ```bash
 roslaunch obj_recognition pool.launch
 rosrun obj_recognition obj_recogniti_segmentation 
-rosrun rviz rviz
+rosrun rviz rviz ?
 
+```
+
+## RVIZ (viewing segmented balls)
+
+```bash
+fixed frame: "head_camera"
+click 'add' below: click 'by topic' at the top: select /obj_recognition/segmented_clusters/PointCloud2: click 'OK'
+change 'topic' to /obj_recognition/segmented_clusters
+see two pool balls!
 ```
