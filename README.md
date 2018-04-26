@@ -167,7 +167,7 @@ rosrun pool_planner listener.cpp
 
 ```bash
 roslaunch obj_recognition pool.launch
-rosrun obj_recognition obj_recogniti_segmentation 
+rosrun obj_recognition obj_recognition_segmentation 
 ```
 
 ## RVIZ (viewing segmented balls)
