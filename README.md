@@ -89,7 +89,7 @@ We downloaded PCL plus a few things in order to get everything to work. This nee
 Install the following libraries:
 
 ``` bash
-sudo apt install ros-kinetic-pcl # TODO check this
+sudo apt install libpcl1.7
 sudo apt install libeigen3-dev
 sudo apt install libpcl-conversions-dev
 sudo apt install ros-*-object-recognition-core
