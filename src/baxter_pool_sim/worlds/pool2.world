@@ -8,7 +8,7 @@
 
         <!-- pool tabel -->
         <model name="pool_table">
-            <pose> 0.5 0.9 0  0 0 0</pose>
+            <pose> 0.4 0.55 0  0 0 0</pose>
             <static>true</static>
             <link name="body">
                 <visual name="visual">
@@ -18,7 +18,7 @@
                     </geometry>
                 </visual>
                 <collision name="table_collision">
-                    <pose> 2.3 -1.4 0.6  0 0 0</pose>
+                    <pose> 2.0 -1.05 0.6  0 0 0</pose>
                     <geometry>
                         <box>
                             <size>1.0 2 0.2</size>
@@ -93,23 +93,14 @@
             </link>
         </model>
 
-        <!-- pool bals -->
-        <population name="pool_balls_population">
-            <model name="pool_ball">
-                <include>
-                    <!-- <static>true</static> -->
-                    <uri>model://pool_ball</uri>
-                </include>
-            </model>
-            <pose> 2.75 -0.5 0.770478   0 0 0</pose>
-            <box>
-                <size>0.5 0.5 0.01</size>
-            </box>
-            <model_count>2</model_count>
-            <distribution>
-                <type>linear-x</type>
-            </distribution>
-        </population>
+         <model name="pool_ball">
+             <include>
+                 <!-- <static>true</static> -->
+                 <uri>model://pool_ball</uri>
+             </include>
+             <pose>  2.366 -0.116 0.770478   0 0 0</pose>
+
+        </model>
 
     </world>
 </sdf>

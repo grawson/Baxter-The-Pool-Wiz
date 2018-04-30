@@ -43,8 +43,8 @@ Shot speeds:
 
 '''
 
-CUE_LEN = 1.5 # cm
-CUE_2_GRIPPER = 0.4 # dist from end of cue to gripper + a bit extra to allow for swing
+CUE_LEN = 1.7 # cm
+CUE_2_GRIPPER = 0.42 # dist from end of cue to gripper + a bit extra to allow for swing
 
 
 def get_shot(CB, OB, pocket):
@@ -60,7 +60,7 @@ def get_shot(CB, OB, pocket):
 
     # To hit ball put hands on line 'direction'
     hand = CB.pos - direction*offset
-    return hand # vel
+    return hand
 
 
 def get_trajectory(CB, OB, pocket, step=0.1):
@@ -73,12 +73,23 @@ def get_trajectory(CB, OB, pocket, step=0.1):
     waypoints = list()
 
     i = 0
-    while i < 1:
-        waypoints.append(parametric_point(start, end, i))
+    noise = 0
+    while i <= 1:
+        point = parametric_point(start, end, i)
+        # add noise to y val
+        # point[1] -= noise
+
+        # noise += 0.001
+        waypoints.append(point)
+
         i += step
-    waypoints.append(parametric_point(start, end, 1))  # ensure destination point is added
-    waypoints.append(parametric_point(start, end, 1))  # ensure destination point is added
+    # waypoints.append(parametric_point(start, end, 1))  # ensure destination point is added
     return waypoints
+
+# Get the roattion along the z axis for the shot
+def get_z_rot(CB, OB, pocket):
+    d = norm(pocket.pos - CB.pos)
+    return math.atan2(d[1], d[0])
 
 
 # Get the point on a line between two 2D points at a certain step
@@ -86,9 +97,12 @@ def get_trajectory(CB, OB, pocket, step=0.1):
 def parametric_point(p1, p2, t):
     return p1 + (p2 - p1)*t
 
-
-def norm(arr):
-    return arr / math.sqrt(np.dot(arr, arr))  # normed
+# normalize an array v
+def norm(v):
+    norm=np.linalg.norm(v, ord=1)
+    if norm==0:
+        norm=np.finfo(v.dtype).eps
+    return v/norm
 
 class Ball():
     def __init__(self, x, y):
