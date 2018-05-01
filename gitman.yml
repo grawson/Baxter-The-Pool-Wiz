@@ -23,5 +23,5 @@ sources:
     repo: https://github.com/ros-planning/moveit_robots.git
     rev: kinetic-devel
 -   name: cluster_segmentation
-    repo: git@github.com:CRLab/cluster_segmentation.git
+    repo: https://github.com/jon-herman/cluster_segmentation.git
     rev: master
