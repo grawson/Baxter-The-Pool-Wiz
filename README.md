@@ -1,3 +1,8 @@
+## Demo
+
+A working demo of Baxter sinking a shot can be found at:
+[Demo](https://www.youtube.com/watch?v=Sl_cYK4EDLY&feature=youtu.be)
+
 ## Cloning Repo
 
 Make sure to clone this repo into your home directory in order to user the install file. That is:

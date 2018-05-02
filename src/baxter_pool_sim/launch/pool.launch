@@ -63,15 +63,15 @@
   </include>
 
   <!-- cloud transformer-->
-  <node name="cloud_transformer" pkg="obj_recognition" type="obj_recognition_cloud_transformer" respawn="false"/>
+  <!--<node name="cloud_transformer" pkg="obj_recognition" type="obj_recognition_cloud_transformer" respawn="false"/>-->
 
 
-  <!-- feature extractor-->
-  <node name="feature_extractor" pkg="obj_recognition" type="obj_recognition_feature_extractor" respawn="false"/>
+  <!--&lt;!&ndash; feature extractor&ndash;&gt;-->
+  <!--<node name="feature_extractor" pkg="obj_recognition" type="obj_recognition_feature_extractor" respawn="false"/>-->
 
 
   <!-- rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" output="screen"/>
+  <!--<node pkg="rviz" type="rviz" name="rviz" output="screen"/>-->
 
 
 </launch>
