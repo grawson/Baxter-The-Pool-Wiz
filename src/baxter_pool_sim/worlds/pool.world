@@ -93,23 +93,15 @@
             </link>
         </model>
 
-        <!-- pool bals -->
-        <population name="pool_balls_population">
-            <model name="pool_ball">
-                <include>
-                    <!-- <static>true</static> -->
-                    <uri>model://pool_ball</uri>
-                </include>
-            </model>
+        <!--pool balls-->
+         <model name="pool_ball">
+             <include>
+                 <!-- <static>true</static> -->
+                 <uri>model://pool_ball</uri>
+             </include>
             <pose> 2.75 -0.5 0.770478   0 0 0</pose>
-            <box>
-                <size>0.5 0.5 0.01</size>
-            </box>
-            <model_count>2</model_count>
-            <distribution>
-                <type>linear-x</type>
-            </distribution>
-        </population>
+
+        </model>
 
     </world>
 </sdf>

@@ -3,9 +3,9 @@ import numpy as np
 
 
 ##########################################
-# 
 #
-# Input:  
+#
+# Input:
 # 		cue    - (x,y,z) position of white ball
 # 		target - (x,y,z) position of target ball
 # 		pocket - (x,y,z) position of pocket
@@ -37,14 +37,14 @@ Shot speeds:
 	medium-soft: 5 mph = 7.3 fps
 	medium: 7 mph = 10 fps
 	medium-fast: 8 mph = 12 fps
-	fast: 12 mph = 18 fps 
+	fast: 12 mph = 18 fps
 	power: 15-20 mph = 22-29 fps
 	powerful break: 25-30 mph = 36-44 fps
 
 '''
 
-CUE_LEN = 1.7 # cm
-CUE_2_GRIPPER = 0.42 # dist from end of cue to gripper + a bit extra to allow for swing
+CUE_LEN = 1.5 # cm
+CUE_2_GRIPPER = 0.39 # dist from end of cue to gripper + a bit extra to allow for swing
 
 
 def get_shot(CB, OB, pocket):

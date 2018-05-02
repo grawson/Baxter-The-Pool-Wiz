@@ -76,25 +76,8 @@ Wait until you see the message `You can start planning now!`. Move the gripper a
 Keep dependencies in `src/dep` up to date with command:
 
 ```bash
-sudo apt install python3-pip
-pip3 install gitman
 gitman update
 ```
-
-
-## PCL
-
-We downloaded PCL plus a few things in order to get everything to work. This needs to happen before simulation.
-
-Install the following libraries:
-
-``` bash
-sudo apt install libpcl1.7
-sudo apt install libeigen3-dev
-sudo apt install libpcl-conversions-dev
-sudo apt install ros-*-object-recognition-core
-```
-
 
 ## Pool Simulation
 
@@ -123,11 +106,4 @@ roslaunch baxter_moveit_config baxter_grippers.launch
 
 # moveit pose planner
 roslaunch pool_planner pose_planner.launch
-```
-
-
-Then, to "listen" for pointclouds:
-
-``` bash
-rosrun pool_planner listener.cpp
 ```

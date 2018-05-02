@@ -132,7 +132,7 @@ class PosePlanner(object):
 def main():
     pose_planner = PosePlanner()
     pose_planner.initial_pose()
-    # pose_planner.swing()
+    pose_planner.swing()
     pose_planner.shutdown()
 
 
