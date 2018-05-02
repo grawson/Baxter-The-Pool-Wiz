@@ -43,9 +43,8 @@ Shot speeds:
 
 '''
 
-CUE_LEN = 1.5 # cm
-CUE_2_GRIPPER = 0.39 # dist from end of cue to gripper + a bit extra to allow for swing
-
+CUE_LEN = 1.7 # cm
+CUE_2_GRIPPER = 0.42 # dist from end of cue to gripper + a bit ex
 
 def get_shot(CB, OB, pocket):
     global CUE_LEN, CUE_2_GRIPPER
