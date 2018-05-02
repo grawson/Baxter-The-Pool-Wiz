@@ -16,6 +16,9 @@ sudo apt-get install gazebo7 ros-kinetic-qt-build ros-kinetic-gazebo-ros-control
 # Install MoveIt
 sudo apt install ros-kinetic-moveit*
 
+#Install PCL
+sudo apt install libpcl1.7
+
 # install git repos
 gitman install --force
 
